@@ -1,0 +1,61 @@
+CREATE TABLE addemployee(
+	emp_id INT AUTO_INCREMENT,
+	emp_name VARCHAR(20),
+	emp_email VARCHAR(30),
+	emp_phoneNo VARCHAR(20),
+	emp_password VARCHAR(30),
+	emp_joindate DATE,
+	emp_salary INT,
+	PRIMARY KEY(emp_id)
+);
+
+ALTER TABLE addemployee AUTO_INCREMENT=1;
+
+CREATE TABLE categroyinfo(
+	category_id INT AUTO_INCREMENT,	
+	category_name VARCHAR(20),
+	PRIMARY KEY(category_id)
+);
+
+ALTER TABLE categroyinfo AUTO_INCREMENT=1;
+
+CREATE TABLE supplier(
+	supplier_id INT AUTO_INCREMENT,
+	supplier_name VARCHAR(20),
+	PRIMARY KEY(supplier_id )
+);
+
+ALTER TABLE supplier AUTO_INCREMENT=1;
+
+CREATE TABLE completeinfo(
+	prd_id INT AUTO_INCREMENT,
+	prd_name VARCHAR(20),
+	prd_category VARCHAR(20),
+	prd_supplier VARCHAR(20),
+	prd_price INT,
+	prd_status VARCHAR(10),
+	PRIMARY KEY(prd_id),
+	FOREIGN KEY (prd_supplier) REFERENCES supplier(supplier_id)
+);
+
+ALTER TABLE completeinfo AUTO_INCREMENT=1;
+
+CREATE TABLE storerecord(
+	BillID INT AUTO_INCREMENT,
+	SellerEmail VARCHAR(30),
+	Date DATE,
+	TotalBill INT,
+	PRIMARY KEY(BillID)
+);
+
+ALTER TABLE storerecord AUTO_INCREMENT=1;
+
+//The creation of table which is given below will create table dynamically according to categoryName that has been stored in categroyinfo table when it is being introduced
+
+CREATE TABLE categoryName(
+	ProductID INT AUTO_INCREMENT,
+	ProductName VARCHAR(40),
+	ProductPrice INT,
+	ProductStatus VARCHAR(10),
+	PRIMARY KEY(ProductID)
+);
