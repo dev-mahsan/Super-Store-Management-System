@@ -43,12 +43,8 @@ Admin or we simply say the Owner can use it as well as the employee of that supe
 - Place Order
 - Store Record
 
-## Contribuors
-Fazalullah Soomro (021-21-0024)
-
-Abdul Sattar (021-21-0080)
-
-Muhammad Ahsan (021-21-0016)
+## Designed By
+Muhammad Ahsan
 
 ## License
 
